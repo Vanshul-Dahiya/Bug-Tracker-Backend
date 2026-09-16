@@ -103,6 +103,7 @@ const getTickets = async (req, res) => {
       .populate("project", "name key")
       .populate("assignedTo", "name email")
       .populate("createdBy", "name email")
+      .populate("updatedBy", "name email")
       .sort({ createdAt: -1 });
 
     res.json(tickets);
