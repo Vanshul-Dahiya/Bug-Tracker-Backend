@@ -8,6 +8,7 @@ const authRoutes = require("./src/routes/authRoutes");
 const projectRoutes = require("./src/routes/projectRoutes");
 const ticketRoutes = require("./src/routes/ticketRoutes");
 const userRoutes = require("./src/routes/userRoutes");
+const commentRoutes = require("./src/routes/commentRoutes");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/tickets", ticketRoutes);
 app.use("/api/users",userRoutes);
+app.use("/api/comments", commentRoutes);
 
 const PORT = process.env.PORT || 5000;
 
